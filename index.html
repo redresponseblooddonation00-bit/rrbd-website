@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RRBD | Donor Registration</title>
+<style>
+:root{--red:#d71932;--red2:#9f1024;--line:#f0a6af;--bg:#fff1f2;--ink:#351016}*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#8f0c20 0,#c91530 230px,#fff1f2 230px);font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink)}header{background:linear-gradient(135deg,#9f1024,#e11d3d);color:#fff;padding:22px 16px 26px;text-align:center;border-bottom:5px solid #7e0b1b}.logo{margin:auto;width:68px;height:68px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;letter-spacing:1px;background:#ffffff20}header h1{font-size:21px;margin:10px 0 4px;color:#fff}header p{margin:0;font-size:13px;color:#ffe1e5}main{max-width:760px;margin:22px auto;padding:0 12px 35px}.intro,.card{background:#fff;border:1px solid #f4c6cc;border-radius:13px;box-shadow:0 5px 18px #780b1b18}.intro{padding:18px 20px;margin-bottom:14px;text-align:center;border-top:4px solid var(--red)}.intro h2{font-size:19px;margin:0 0 8px;color:var(--red2)}.intro p{font-size:13px;line-height:1.7;color:#6b343b;margin:0}.card{padding:20px;margin-bottom:14px}.section{font-size:16px;font-weight:700;color:var(--red2);margin:0 0 17px;padding-bottom:10px;border-bottom:2px solid #ffe0e4}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}label{font-size:13px;font-weight:600}.req{color:var(--red)}input,select,textarea{width:100%;padding:11px 12px;border:1px solid #e6b6bd;border-radius:7px;background:#fffafa;color:#351016;font:14px Arial,sans-serif;min-height:43px}input:focus,select:focus,textarea:focus{outline:2px solid #f5a8b3;border-color:var(--red)}.hint{font-size:11px;color:#8d4a53}.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}button{border:0;border-radius:7px;padding:13px 22px;font-size:14px;font-weight:700;cursor:pointer}.primary{background:linear-gradient(135deg,#e11d3d,#a50f25);color:white;box-shadow:0 3px 8px #9f102433}.primary:disabled{opacity:.6}.hidden{display:none!important}.success{background:#fff;color:#17663a;border:1px solid #b9e6c9;padding:20px;border-radius:10px;text-align:center}.notice{font-size:12px;color:#666;line-height:1.6}.foot{text-align:center;color:#8b545b;font-size:11px;margin-top:18px}.consent{display:flex;align-items:flex-start;gap:9px;font-weight:400!important;line-height:1.7}.consent input{width:18px;min-width:18px;min-height:18px;margin-top:2px;accent-color:var(--red)}@media(max-width:560px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.card{padding:16px}header h1{font-size:18px}}
+</style></head><body>
+<header><div class="logo">RRBD</div><h1>Red Response Blood Donation</h1><p>মানবতার সেবায়, সর্বদা নিয়োজিত</p></header>
+<main><div class="intro"><h2>রক্তদাতা নিবন্ধন ফর্ম</h2><p>রক্তদাতা হিসেবে নিবন্ধন করতে সব প্রযোজ্য তথ্য সঠিকভাবে পূরণ করুন। প্রতিটি প্রশ্নের উত্তর আবশ্যক।</p></div>
+<form id="form">
+<section class="card"><h3 class="section">রক্তদাতার ব্যক্তিগত ও যোগাযোগের তথ্য</h3><div class="grid">
+<div class="field"><label>পূর্ণ নাম <span class="req">*</span></label><input name="name" required placeholder="আপনার নাম"></div>
+<div class="field"><label>মোবাইল নম্বর <span class="req">*</span></label><input name="phone" type="tel" required pattern="[0-9+ -]{10,16}" placeholder="01XXXXXXXXX"></div>
+<div class="field"><label>WhatsApp নম্বর</label><input name="whatsapp" type="tel" pattern="[0-9+ -]{10,16}" placeholder="01XXXXXXXXX"><span class="hint">WhatsApp নম্বর আলাদা হলে এখানে দিন</span></div>
+
+<div class="field"><label>জন্মতারিখ <span class="req">*</span></label><input name="dob" type="date" required></div>
+<div class="field"><label>লিঙ্গ <span class="req">*</span></label><select name="gender" required><option value="">নির্বাচন করুন</option><option>পুরুষ</option><option>নারী</option><option>অন্যান্য</option></select></div>
+<div class="field"><label>জেলা <span class="req">*</span></label><input name="district" required placeholder="আপনার জেলা"></div>
+
+<div class="field full"><label>গ্রাম/এলাকা/পূর্ণ ঠিকানা <span class="req">*</span></label><textarea name="address" rows="2" required placeholder="গ্রাম/মহল্লা ও পরিচিত স্থান"></textarea></div>
+
+</div></section>
+<section class="card"><h3 class="section">রক্তদানের তথ্য</h3><div class="grid">
+<div class="field"><label>রক্তের গ্রুপ <span class="req">*</span></label><select name="blood" required><option value="">নির্বাচন করুন</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+<div class="field"><label>আগে রক্ত দিয়েছেন? <span class="req">*</span></label><select name="donatedBefore" required><option value="">নির্বাচন করুন</option><option>হ্যাঁ</option><option>না</option></select></div>
+<div class="field hidden" id="lastDonationField"><label>সর্বশেষ রক্তদানের তারিখ <span class="req">*</span></label><input name="lastDonation" id="lastDonation" type="date"></div>
+<div class="field hidden" id="donationCountField"><label>কতবার রক্ত দিয়েছেন? <span class="req">*</span></label><select name="donationCount" id="donationCount"><option value="">নির্বাচন করুন</option><option>১–৩ বার</option><option>৪–৬ বার</option><option>৭ বার বা তার বেশি</option></select></div>
+<div class="field full"><label>আপনার কোনো বিশেষ রোগ আছে কি? <span class="req">*</span></label><select name="specialDisease" id="specialDisease" required><option value="">নির্বাচন করুন</option><option>না</option><option>হ্যাঁ</option></select></div>
+<div class="field full hidden" id="diseaseDetails"><label>রোগের নাম/বিস্তারিত <span class="req">*</span></label><textarea name="diseaseDetails" id="diseaseDetailsInput" rows="2" placeholder="রোগের নাম লিখুন"></textarea></div>
+<div class="field full"><label>আপনি কেন আমাদের সঙ্গে কাজ করতে চান? <span class="req">*</span></label><textarea name="reason" rows="3" required placeholder="আপনার আগ্রহের কথা সংক্ষেপে লিখুন"></textarea></div>
+
+<div class="field full"><label class="consent"><input type="checkbox" name="consent" required> <span>আমি নিশ্চিত করছি যে দেওয়া তথ্য সঠিক এবং প্রয়োজনে Red Response Blood Donation আমার সঙ্গে যোগাযোগ করতে পারবে। <span class="req">*</span></span></label></div>
+</div><div class="actions"><span></span><button type="submit" class="primary">নিবন্ধন জমা দিন ✓</button></div></section>
+</form>
+<div id="success" class="success hidden"><h2>নিবন্ধন সম্পন্ন হয়েছে!</h2><p>এই প্রোটোটাইপে তথ্যটি এই ডিভাইসের ব্রাউজারে সংরক্ষিত হয়েছে।</p><p class="notice">সবার তথ্য অ্যাডমিনের কাছে পৌঁছাতে Google Sheets বা সার্ভারের সঙ্গে সংযোগ করতে হবে।</p><button class="primary" onclick="location.reload()">নতুন নিবন্ধন</button></div>
+<div class="foot">© Red Response Blood Donation · RRBD</div></main>
+<script>
+const form=document.getElementById('form');
+const diseaseSelect=document.getElementById('specialDisease');
+const diseaseDetails=document.getElementById('diseaseDetails');
+const diseaseDetailsInput=document.getElementById('diseaseDetailsInput');
+const donatedBefore=document.querySelector('[name=donatedBefore]');
+const lastDonationField=document.getElementById('lastDonationField');
+const lastDonation=document.getElementById('lastDonation');
+const donationCountField=document.getElementById('donationCountField');
+const donationCount=document.getElementById('donationCount');
+function updateDonationFields(){const yes=donatedBefore.value==='হ্যাঁ';lastDonationField.classList.toggle('hidden',!yes);donationCountField.classList.toggle('hidden',!yes);lastDonation.required=yes;donationCount.required=yes;if(!yes){lastDonation.value='';donationCount.value='';}}
+donatedBefore.addEventListener('change',updateDonationFields);
+diseaseSelect.addEventListener('change',()=>{const yes=diseaseSelect.value==='হ্যাঁ';diseaseDetails.classList.toggle('hidden',!yes);diseaseDetailsInput.required=yes;if(!yes)diseaseDetailsInput.value='';});
+const RRBD_WEB_APP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+form.addEventListener('submit',async e=>{
+ e.preventDefault(); if(!form.reportValidity())return;
+ if(RRBD_WEB_APP_URL.startsWith('PASTE_')){alert('অনলাইনে আবেদন জমা চালু করতে README.txt-এর নির্দেশনা অনুযায়ী Google Apps Script Web App URL বসাতে হবে।');return;}
+ const data={};new FormData(form).forEach((v,k)=>{if(!(v instanceof File))data[k]=v});
+ data.submittedAt=new Date().toISOString();
+ const btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='জমা হচ্ছে...';
+ try{
+  await fetch(RRBD_WEB_APP_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
+  form.classList.add('hidden');document.querySelector('.intro').classList.add('hidden');
+  document.getElementById('success').classList.remove('hidden');
+  document.querySelector('#success p').textContent='আপনার নিবন্ধনের তথ্য জমা দেওয়ার অনুরোধ পাঠানো হয়েছে। ধন্যবাদ।';
+  document.querySelector('#success .notice').textContent='ইন্টারনেট সংযোগ ঠিক থাকলে তথ্যটি RRBD-এর Google Sheet-এ জমা হবে।';
+  window.scrollTo({top:0,behavior:'smooth'});
+ }catch(err){alert('জমা দেওয়া যায়নি। ইন্টারনেট সংযোগ ও Web App URL পরীক্ষা করুন।');btn.disabled=false;btn.textContent='নিবন্ধন জমা দিন ✓';}
+});
+</script></body></html>
