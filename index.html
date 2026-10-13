@@ -46,7 +46,7 @@ const donationCount=document.getElementById('donationCount');
 function updateDonationFields(){const yes=donatedBefore.value==='হ্যাঁ';lastDonationField.classList.toggle('hidden',!yes);donationCountField.classList.toggle('hidden',!yes);lastDonation.required=yes;donationCount.required=yes;if(!yes){lastDonation.value='';donationCount.value='';}}
 donatedBefore.addEventListener('change',updateDonationFields);
 diseaseSelect.addEventListener('change',()=>{const yes=diseaseSelect.value==='হ্যাঁ';diseaseDetails.classList.toggle('hidden',!yes);diseaseDetailsInput.required=yes;if(!yes)diseaseDetailsInput.value='';});
-const RRBD_WEB_APP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const RRBD_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxb7MuR6UpEJsbROyUeudgqs8mDR5Fx3MYkYj0wWzvPpnFaQ9t1T5DxHQohicps_ctU/exec';
 form.addEventListener('submit',async e=>{
  e.preventDefault(); if(!form.reportValidity())return;
  if(RRBD_WEB_APP_URL.startsWith('PASTE_')){alert('অনলাইনে আবেদন জমা চালু করতে README.txt-এর নির্দেশনা অনুযায়ী Google Apps Script Web App URL বসাতে হবে।');return;}
